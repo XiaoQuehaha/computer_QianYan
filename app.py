@@ -12,12 +12,13 @@ st.write("欢迎来到我的 AI 项目，本项目已实现基础迁移与前端
 # 模拟 AI 回复逻辑 if "messages" not in st.session_state:     
 st.session_state.messages = []  
 for message in st.session_state.messages:     
-with st.chat_message(message["role"]):         
-st.markdown(message["content"])  
+  with st.chat_message(message["role"]):         
+    st.markdown(message["content"])  
 if prompt := st.chat_input("想问点什么？"):     
-st.session_state.messages.append({"role": "user", "content": prompt})     
+  st.session_state.messages.append({"role": "user", "content": prompt})     
 with st.chat_message("user"):         
-st.markdown(prompt)          
+  st.markdown(prompt)          
 with st.chat_message("assistant"):         
-response = f"我是由[阙联强]开发的 AI。你刚才说的是：'{prompt}'。当前环境参数 Temperature 设为 {temp}。"         
-st.markdown(response)     st.session_state.messages.append({"role": "assistant", "content": response})
+  response = f"我是由[阙联强]开发的 AI。你刚才说的是：'{prompt}'。当前环境参数 Temperature 设为 {temp}。"         
+  st.markdown(response)
+  st.session_state.messages.append({"role": "assistant", "content": response})
