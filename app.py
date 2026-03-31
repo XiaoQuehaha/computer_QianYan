@@ -7,7 +7,7 @@ st.sidebar.info("姓名：阙联强")
 st.sidebar.info("学号：423830120")  
 # --- 核心要求：参数调整 --- st.sidebar.title("⚙️ AI 参数设置") 
 temp = st.sidebar.slider("创造力权重 (Temperature)", 0.0, 1.0, 0.7) # 调整这个参数  
-st.title("🤖 我的前沿 AI 聊天机器人") 
+st.title("🤖 阙联强的ai聊天机器人") 
 st.write("欢迎来到我的 AI 项目，本项目已实现基础迁移与前端优化。")  
 # 模拟 AI 回复逻辑 if "messages" not in st.session_state:     
 st.session_state.messages = []  
